@@ -1,0 +1,12 @@
+.btn-wrap .secondary, .btn-wrap .primary {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.btn-wrap .primary {
+  background-color: tomato;
+}
+.btn-wrap .secondary {
+  background-color: yellowgreen;
+}/*# sourceMappingURL=extend.css.map */

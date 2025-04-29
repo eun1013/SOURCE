@@ -1,0 +1,42 @@
+$breakpoint: 768px;
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul{
+        display: flex;
+        gap: 10px;
+        list-style: none;
+        li{
+            a{
+                text-decoration: none;
+                color: inherit;
+                font-size: 18px;
+            }
+        }
+    }
+    @media (max-width:$breakpoint){
+        flex-direction: column;
+    }
+}
+
+$button-colors:(
+    primary: #3498db,
+    secondary: #95a5a5,
+    danger:#e74c3c
+);
+
+button{
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    @each $name, $color in $button-colors{
+        &.#{$name}{
+            background-color: $color;
+            &:hover{
+                background-color: darken($color, 30%);
+            }
+        }
+    }
+}

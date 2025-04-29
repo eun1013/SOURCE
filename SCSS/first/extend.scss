@@ -1,0 +1,15 @@
+%base-button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.btn-wrap{
+    .primary{
+        @extend %base-button;
+        background-color: tomato;
+    }
+    .secondary{
+        @extend %base-button;
+        background-color: yellowgreen;
+    }
+}

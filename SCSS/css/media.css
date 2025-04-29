@@ -1,0 +1,52 @@
+.container {
+  height: 100vh;
+  width: 1000px;
+  margin: 0 auto;
+  background-color: #3498db;
+}
+@media (max-width: 786px) {
+  .container {
+    width: 90%;
+    background-color: #2ecc71;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+    background-color: #e74c3c;
+  }
+}
+
+.card:nth-child(1) button {
+  background-color: #3498db;
+  color: #eee;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.card:nth-child(1) button:hover {
+  background-color: #196090;
+}
+.card:nth-child(2) button {
+  background-color: #2ecc71;
+  color: #eee;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.card:nth-child(2) button:hover {
+  background-color: #1b7943;
+}
+.card:nth-child(3) button {
+  background-color: #e74c3c;
+  color: #eee;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.card:nth-child(3) button:hover {
+  background-color: #a82315;
+}/*# sourceMappingURL=media.css.map */

@@ -1,0 +1,64 @@
+$pc-color:#3498db;
+$table-color: #2ecc71;
+$mobile-color: #e74c3c;
+
+@mixin respond-to($device){
+    @if $device == mobile {
+        @media (max-width:500px) {@content;}
+    }
+    @else if $device == table{
+        @media (max-width:786px) {@content;}
+        }
+    }
+
+.container{
+    height: 100vh;
+    width: 1000px;
+    margin: 0 auto;
+    background-color: $pc-color;
+    @include respond-to(table){
+        width: 90%;
+        background-color: $table-color
+    }
+    @include respond-to(mobile){
+        width: 100%;
+        background-color: $mobile-color
+    }
+}
+
+$radius: 5px;
+// section style
+@mixin button-style($bg-color){
+    background-color: $bg-color;
+    color: #eee;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: $radius;
+    &:hover{
+        background-color: darken($bg-color,20%);
+    }
+}
+
+.card{
+    // button{
+    //     @include button-style($pc-color);
+    // }
+    &:nth-child(1){
+        button{
+        @include button-style($pc-color);
+    }
+        }
+    &:nth-child(2){
+        button{
+        @include button-style($table-color);
+    }
+        }
+    
+    &:nth-child(3){
+        button{
+        @include button-style($mobile-color);
+    }
+        }
+}
+
