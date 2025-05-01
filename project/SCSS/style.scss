@@ -1,3 +1,36 @@
+$main-color: #F6F2F1;
+
+@mixin flex($justify:center, $align:center, $gap:1rem){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    gap: 1rem;
+}
+
 body{
-    background-color: tomato;
+    font-family: 'AritaBuri',sans-serif;
+}
+// header
+header{
+    height: 50px;
+    background-color: $main-color ;
+    .head{
+        width: 100%;
+        padding: 0.3rem 5rem;
+        @include flex(space-between,center,0);
+        nav{
+            ul{
+                display:flex;
+                gap: 2rem;
+            }
+        }
+        h1{
+            text-align: center;
+        }
+        .icon{
+            display: flex;
+            gap: 2rem;
+            font-size: 1.2rem;
+        }
+    }
 }
